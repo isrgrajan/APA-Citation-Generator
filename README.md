@@ -3,6 +3,9 @@ Copyright (c) 2023, Isrg. All rights reserved.
 
 This Python script generates APA citations for a given URL. It uses BeautifulSoup and Selenium to fetch information from the webpage and generate the citation. The citation includes the title of the webpage, the published date, and the accessed date.
 
+## Screenshot
+![Alt text](Screenshot.jpg "APA Citation Generator")
+
 ## Installation
 To run this script, you will need to install the following packages:
 * requests
