@@ -62,14 +62,14 @@ def fetch_info(url):
 def fetch_info_thread(url, output_box):
     output_box.config(state=tk.NORMAL)
     output_box.delete(1.0, tk.END)
-    
+
     # validate the URL
-    pattern = re.compile(r'^https?://(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$')
+    pattern = re.compile(r'^https?://(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(?:/[^/\s]+)*$')
     if not pattern.match(url):
         output_box.insert(tk.END, "Invalid URL")
         output_box.config(state=tk.DISABLED)
         return
-    
+
     output_box.insert(tk.END, "Fetching information...\n")
     output_box.config(state=tk.DISABLED)
 
